@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposal · Linen Nail &amp; Lash Studio</title>
+<meta name="description" content="Website and online booking platform for Linen Nail & Lash Studio, Ranelagh. Scope, timeline and investment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F3EE; --surface:#FFFFFF; --text:#23201D; --muted:#5F5850; --line:#E4DCD2;
+  --accent:#2F5D50; --accent-dark:#234740; --on-accent:#FFFFFF;
+  --radius:16px; --radius-sm:8px;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:var(--bg)}
+.container{max-width:1080px;margin:0 auto;padding:0 var(--s2)}
+section{padding:var(--s6) 0}
+h1{font-size:36px;line-height:1.1;font-weight:700;letter-spacing:-0.01em}
+h2{font-size:28px;line-height:1.2;font-weight:700;margin-bottom:var(--s3)}
+h3{font-size:20px;line-height:1.3;font-weight:700;margin-bottom:var(--s1)}
+p{max-width:65ch}
+.muted{color:var(--muted)}
+.eyebrow{font-size:16px;font-weight:500;color:var(--accent);margin-bottom:var(--s2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 var(--s4);border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 16px/1 Manrope,sans-serif;text-decoration:none;transition:background .2s ease-out}
+.btn:hover{background:var(--accent-dark)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn--ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn--ghost:hover{background:var(--surface)}
+.hero{padding:var(--s6) 0 var(--s5)}
+.hero p{font-size:18px;margin:var(--s3) 0 var(--s4)}
+.hero__meta{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);margin-top:var(--s3);color:var(--muted)}
+.grid{display:grid;gap:var(--s2);grid-template-columns:1fr}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s3)}
+.steps{counter-reset:step;display:grid;gap:var(--s2)}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s3);position:relative}
+.step__date{font-weight:700;color:var(--accent)}
+table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+th,td{text-align:left;padding:var(--s2);border-bottom:1px solid var(--line);vertical-align:top}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+tr.total td{font-weight:700;font-size:18px;border-bottom:none}
+.payments{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:var(--s1) var(--s2)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:var(--s2) var(--s3)}
+details+details{margin-top:var(--s1)}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:var(--s1)}
+.cta{background:var(--accent);color:var(--on-accent);border-radius:var(--radius);padding:var(--s5) var(--s3);text-align:center}
+.cta p{margin:var(--s2) auto var(--s4);color:#E6EEEB}
+.cta .btn{background:var(--surface);color:var(--accent)}
+.cta .btn:hover{background:var(--bg)}
+footer{padding:var(--s4) 0;color:var(--muted)}
+ul.checks{list-style:none;display:grid;gap:var(--s1)}
+ul.checks li::before{content:"✓";color:var(--accent);font-weight:700;margin-right:var(--s1)}
+.fade{opacity:0;transform:translateY(16px);transition:opacity .5s ease-out,transform .5s ease-out}
+.fade.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (min-width:768px){
+  body{font-size:18px}
+  .container{padding:0 var(--s4)}
+  section{padding:var(--s7) 0}
+  h1{font-size:56px}
+  h2{font-size:40px}
+  h3{font-size:22px}
+  .hero p,.eyebrow,.btn{font-size:18px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+  .grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <div class="container fade">
+    <p class="eyebrow">Proposal for Aoife Byrne · Linen Nail &amp; Lash Studio</p>
+    <h1>Bookings that come in while you're off the clock</h1>
+    <p>A calm website and your own booking platform, so new clients book with a deposit, regulars rebook their infill in one tap, and your evenings stop going on DMs.</p>
+    <a class="btn" href="mailto:makuha.aidesign@gmail.com?subject=Linen%20%C2%B7%20I%20accept%20the%20proposal">Accept the proposal</a>
+    <div class="hero__meta"><span>Live in 4 weeks</span><span>·</span><span>€2,750</span><span>·</span><span>Gift vouchers live before Christmas</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="container fade">
+    <h2>What you get</h2>
+    <div class="grid grid--3">
+      <div class="card"><h3>Strategy and texts</h3><p>Research of 8 Dublin studios and real client reviews, page structure and all texts in English, written in your clients' words.</p></div>
+      <div class="card"><h3>Landing page</h3><p>Nails and lashes in one visit, prices with no tip screens, your team, reviews and FAQ. Mobile first, built to be found on Google and in AI search.</p></div>
+      <div class="card"><h3>Booking platform</h3><p>Clients pick a service, a technician and a time in 4 steps. New clients pay a €20 deposit. Regulars see "Book again with Aoife".</p></div>
+      <div class="card"><h3>Technician dashboard</h3><p>Each of you sees today's and this week's bookings, client notes (allergies, lash map, nail shape) and blocks days off.</p></div>
+      <div class="card"><h3>Gift vouchers</h3><p>€50, €100 or a treatment, bought online and sent as a PDF by email. Ready for Christmas, Valentine's and Mother's Day.</p></div>
+      <div class="card"><h3>Photos and handover</h3><p>12 AI images in the Linen style until you have your own shoot, plus a 30-minute walkthrough so you can edit prices and hours yourself.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container fade">
+    <h2>Stages and timing</h2>
+    <div class="steps">
+      <div class="step"><p class="step__date">23–27 Nov</p><h3>Strategy</h3><p class="muted">Brief, structure and texts. You approve them in one 20-minute call.</p></div>
+      <div class="step"><p class="step__date">30 Nov – 4 Dec</p><h3>Design</h3><p class="muted">Landing and platform screens, desktop and mobile. Gift vouchers go live first.</p></div>
+      <div class="step"><p class="step__date">7–14 Dec</p><h3>Build</h3><p class="muted">Website, booking, accounts and deposits, connected to your domain linenstudio.ie.</p></div>
+      <div class="step"><p class="step__date">15–18 Dec</p><h3>Test and launch</h3><p class="muted">We test every booking path on real phones, then go live and walk you through it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container fade">
+    <h2>Investment</h2>
+    <table>
+      <thead><tr><th>Item</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Landing page design (desktop and mobile)</td><td>€450</td></tr>
+        <tr><td>Landing page build (code, SEO and AI-search basics)</td><td>€350</td></tr>
+        <tr><td>Booking platform design (client and technician screens)</td><td>€650</td></tr>
+        <tr><td>Booking platform build (accounts, booking, deposits, vouchers)</td><td>€1,050</td></tr>
+        <tr><td>12 AI images in the Linen style</td><td>€250</td></tr>
+        <tr class="total"><td>Total</td><td>€2,750</td></tr>
+      </tbody>
+    </table>
+    <div class="payments">
+      <span class="pill">50% to start</span><span class="pill">30% after design approval</span><span class="pill">20% before handover</span>
+    </div>
+    <p class="muted" style="margin-top:var(--s3)">Two rounds of changes are included at each stage. Hosting on Vercel and the database on Supabase are free at your size.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container fade">
+    <h2>Why work with me</h2>
+    <div class="grid grid--3">
+      <div class="card"><h3>I've already studied your market</h3><p>8 Dublin studios and real reviews: nobody nearby offers nails and lashes at once or says "no tip screens". Your site will.</p></div>
+      <div class="card"><h3>I design for bookings, not just looks</h3><p>My MORA nail atelier project turned DM chaos into online booking. <a href="https://www.behance.net/gallery/258039699/MORA-Nail-Atelier-from-DM-chaos-to-online-booking">See the case</a>.</p></div>
+      <div class="card"><h3>One person, start to launch</h3><p>Strategy, design and build in one pair of hands. No handoffs, no "the developer will get back to you".</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container fade">
+    <h2>Questions</h2>
+    <details><summary>Can I keep Fresha while we build?</summary><p>Yes. Fresha keeps working until launch day, and you can keep it afterwards as an extra channel if you like.</p></details>
+    <details><summary>What do I need to prepare?</summary><p>Your logo, prices, opening hours and access to linenstudio.ie. About 30 minutes in total. I'll send a checklist.</p></details>
+    <details><summary>Who owns the website and client data?</summary><p>You do. The domain, code and client database are on your accounts from day one.</p></details>
+    <details><summary>What if I want changes after launch?</summary><p>Small fixes in the first 2 weeks are free. After that, changes are billed by the hour, and you can edit prices and hours yourself.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="container fade">
+    <div class="cta">
+      <h2>Ready for calmer evenings?</h2>
+      <p>Accept the proposal and we start on 23 November. Gift vouchers will be live before the Christmas rush.</p>
+      <a class="btn" href="mailto:makuha.aidesign@gmail.com?subject=Linen%20%C2%B7%20I%20accept%20the%20proposal">Accept the proposal</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <p>Viktoriia Mukhina · UX/UI and AI web designer · <a href="mailto:makuha.aidesign@gmail.com">makuha.aidesign@gmail.com</a> · Instagram <a href="https://www.instagram.com/mukhina.webdesign/">@mukhina.webdesign</a></p>
+  </div>
+</footer>
+<script>
+const els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:0.15});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('is-visible'))}
+</script>
+</body>
+</html>
